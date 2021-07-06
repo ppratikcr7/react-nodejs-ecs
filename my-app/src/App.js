@@ -7,7 +7,9 @@ import { DisplayBoard } from './components/DisplayBoard'
 import CreateUser from './components/CreateUser'
 import { getAllUsers, createUser } from './services/UserService'
 
+const name = process.env.REACT_APP_NAME;
 class App extends Component {
+  
 
   state = {
     user: {},
@@ -47,7 +49,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Header></Header>
+        <Header>{name}</Header>
         <div className="container mrgnbtm">
           <div className="row">
             <div className="col-md-8">
@@ -57,6 +59,7 @@ class App extends Component {
                   createUser={this.createUser}
                   >
                 </CreateUser>
+                {name}
             </div>
             <div className="col-md-4">
                 <DisplayBoard
@@ -68,6 +71,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row mrgnbtm">
+        
           <Users users={this.state.users}></Users>
         </div>
       </div>
