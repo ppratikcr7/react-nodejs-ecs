@@ -26,7 +26,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: playpowerlabs/upgrade/backend:latest
+            tags: react-nodejs-ecs/my-app:latest
         
         - name: Image digest
           run: echo ${{ steps.docker_build.outputs.digest }} 
