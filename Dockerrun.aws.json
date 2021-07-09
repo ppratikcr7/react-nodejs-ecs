@@ -1,21 +1,14 @@
-{
+{   
     "AWSEBDockerrunVersion": "1",
-    "Authentication": {
-
-        "Bucket": "elasticbeanstalk-us-east-1-781188149671",   
-        "Key": "dockercfg"
-     
-      },
     "Image": {
-      "Name": "pratikppl/react-nodejs-ecs:latest",
-      "Update": "true"
+        "Name": "pratikppl/react-nodejs-ecs:latest",
+        "Update": "true"
     },
     "Ports": [
-      {
-        "ContainerPort": "3080"
-      }
+        {
+        "ContainerPort": 3080
+        }
     ],
     "Volumes": [],
     "Logging": "/var/log/eb-activity.log"
-  }
-  
+}
